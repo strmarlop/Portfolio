@@ -1,19 +1,20 @@
 <div class="row">
     <div class="col-md-4">
         <div class="content"> 
-        <div class="card text-center mt-4 shadow p-3 mb-5 bg-white rounded" style="width: 25rem;">
-            <div class="content-overlay"></div>
-            <img class="card-img-top" src="{{ asset('build/images/' ~ project.picture) }}" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">{{ project.title }}</h5>
-                <p class="card-text text-justify">{{ project.description }}</p>
-            </div>
-            <div class="content-details fadeIn-bottom">
-                <h5 class="content-title">{{ project.technology }}</h5>
-                <br>
-                <h5 class="content-title">{{ project.timeSpent }}</h5>
+            <div class="card text-center mt-4 shadow p-3 mb-5 bg-white rounded" style="width: 25rem;">
+                <div class="content-overlay"></div>
+                <img class="card-img-top" src="{{ asset('build/images/' ~ project.picture) }}" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">{{ project.title }}</h5>
+                    <p class="card-text text-justify">{{ project.description }}</p>
+                </div>
+                <div class="content-details fadeIn-bottom">
+                    <h5 class="content-title">{{ project.technology }}</h5>
+                    <br>
+                    <h5 class="content-title">{{ project.timeSpent }}</h5>
+                </div>
+                <a href="{{ project.url }}" class="stretched-link" target="_blank"></a>
             </div>
         </div>
-    </div>
     </div>
 </div>

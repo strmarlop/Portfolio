@@ -19,7 +19,6 @@ class ProjectFixtures extends Fixture
 
     public function load(ObjectManager $manager): void
     {
-
         $createdAt  = new DateTimeImmutable(); 
 
         foreach (self::PROJECTS as $key => $projectInfo) {
