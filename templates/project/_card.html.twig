@@ -1,0 +1,33 @@
+{# <div class="card text-center mt-4 shadow p-3 mb-5 bg-white rounded" style="width: 25rem;">
+    <img class="card-img-top" src="{{ asset('build/images/' ~ project.picture) }}" alt="Card image cap">
+    <div class="card-body">
+        <h5 class="card-title">{{ project.title }}</h5>
+        <p class="card-text">{{ project.description }}</p>
+    </div>
+
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">{{ project.technology }}</li>
+        <li class="list-group-item">{{ project.timeSpent }}</li>
+    </ul>
+    <div class="card-body">
+
+        <a href="{{ project.url }}" class="btn btn-outline-dark stretched-link" target="_blank">Check it out!</a>
+    </div>
+</div> #}
+
+
+
+{# // a probar #}
+<div class="card text-center mt-4 shadow p-3 mb-5 bg-white rounded" style="width: 25rem;">
+    <a href="#">
+        <div class="content-overlay"></div>
+            <img class="content-image" src="{{ asset('build/images/' ~ project.picture) }}">
+            <div class="content-details fadeIn-bottom">
+                <h3 class="content-title">Khumbu Valley Hotel</h3>
+                <p class="content-text">
+                    <i class="fa fa-map-marker"></i> 
+                    Nepal
+                </p>
+        </div>
+    </a> 
+</div>

@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}My projects{% endblock %}
+
+{% block body %}
+    <div class="ml-5 mr-5 mt-4 mb-4">
+        <h1>My projects</h1>
+    </div>
+
+{# {% include "project/_card.html.twig" %} #}
+
+
+
+    {# <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ project.id }}</td>
+            </tr>
+            <tr>
+                <th>Title</th>
+                <td>{{ project.title }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ project.description }}</td>
+            </tr>
+            <tr>
+                <th>Picture</th>
+                <td>{{ project.picture }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('project_index') }}">back to list</a>
+
+    <a href="{{ path('project_edit', {'id': project.id}) }}">edit</a>
+
+    {{ include('project/_delete_form.html.twig') }} #}
+{% endblock %}
