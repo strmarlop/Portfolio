@@ -7,14 +7,11 @@
         <h1>My projects</h1>
     </div>
     
-    <div class="d-flex flex-row">
+    <div class="container">
         {% for project in projects %}
-            <div class="p-2">
-                {% include "project/_card.html.twig" %}
-            </div>
+            {% include "project/_card_fade.html.twig" %}
         {% endfor %}
     </div>
-
 
     {# <a href="{{ path('project_new') }}">Create new</a>  #}
 {% endblock %}

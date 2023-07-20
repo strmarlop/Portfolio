@@ -24,6 +24,10 @@ class ProjectRepository extends ServiceEntityRepository
 //    /**
 //     * @return Project[] Returns an array of Project objects
 //     */
+
+    public function findAll() {     
+        return $this->findBy([], ['id' => 'DESC']);
+    }
 //    public function findByExampleField($value): array
 //    {
 //        return $this->createQueryBuilder('p')
