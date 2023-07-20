@@ -5,17 +5,16 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarColor03">
       <ul class="navbar-nav me-auto">
-        <li class="nav-item">
+        <li class="nav-item mr-2">
           <a class="nav-link active" href="{{ path('home_index') }}">Home
             <span class="visually-hidden">(current)</span>
           </a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Projects</a>
-          {# {{ path('project_show', {'id': project.id}) }} #}
+        <li class="nav-item mr-2">
+          <a class="nav-link" href="{{ path('project_index') }}">Projects</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">About me</a>
+          <a class="nav-link" href="{{ path('about_index') }}">About me</a>
         </li>
       </ul>
     </div>
