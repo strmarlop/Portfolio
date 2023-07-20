@@ -2,12 +2,12 @@
 
 $font-family-base: 'Quicksand', sans-serif;
 
-//navbar
+//Navbar
 .navbar.navbar-expand-lg.bg-light {
     font-size: 1.1em;
 }
 
-//home, split screen
+//Home, split screen
 .leftside, .rightside {
     height: 50vh;
     width: 100%;
@@ -17,25 +17,25 @@ $font-family-base: 'Quicksand', sans-serif;
     background-color: rgb(21, 163, 92);
 }
 
-//home, text left
+//Home, text left
 .row.no-gutters .col-lg-6.no-gutters .leftside.d-flex.justify-content-center.align-items-center{
     font-size: 30px;
 }
 
-//home, image left
+//Home, image left
 .row.no-gutters .col-lg-6.no-gutters .rightside img {
     width: 100%;
     height: 100vh;
 }
 
-//project index, title souligné
+//Project index, title souligné
 h1{
     border-bottom: 1px solid black;
     padding-bottom: 0.2em;
     margin-bottom: 1em;
 }
 
-//project index, card fade
+//Project index, card fade
 .container{
     display: flex;
     justify-content: space-between;
@@ -104,7 +104,7 @@ h1{
     top: 80%;
 }
 
-//about pic+text
+//About me, pic+text top
 .text-center {
     display: flex;
     flex-direction: row;
@@ -121,7 +121,7 @@ h1{
     text-align: justify;
 }
 
-//background pic+text+botton
+//About me, background pic+text+botton profile
 .p-3.mb-2.bg-light.text-dark {
     width: 50%;
     margin: auto;
@@ -129,13 +129,7 @@ h1{
     border: 1px solid #d6d6d6;
 }
 
-
-
-
-
-
-
-//TIMELINE aboutme
+//Timeline aboutme
 $primary-color: #fff;
 $background-color: linear-gradient(160deg, #ffffff, #c2c2c2);
 $text-color: #3c3f64;
@@ -156,7 +150,7 @@ body {
   padding-bottom: 50px;
 }
 
-// STYLING
+// Timeline Styling
 .timeline {
   ul {
     li {
@@ -228,7 +222,7 @@ body {
   }
 }
 
-//Title card timeline
+//Timeline title card
 .timeline ul li.in-view div .discovery h2 {
     font-size: 1.18em;
     text-align: center;
@@ -239,7 +233,7 @@ body {
     padding-bottom: 0.7em;
 }
 
-// ANIMATION
+// Timeline Animation
 .timeline {
   ul {
     li {
@@ -312,8 +306,6 @@ body {
   }
 }
 
-
-
 //Skills + competences
 .skills-competences {
     display: grid;
@@ -321,6 +313,8 @@ body {
     gap: 7em;
     width: 60%;
     margin: auto;
+    margin-top: 5em;
+    margin-bottom: 5em;
 }
 
 .skills-competences .ml-5.mr-5.mt-4.mb-4 .competences{
@@ -332,17 +326,30 @@ body {
     text-align: end;
 }
 
+//Footer
+footer.bg-dark.text-center.text-white {
+    position: fixed;
+    height: 55px;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
 
+footer span {
+    color: white;
+    margin-right: 1em;
+}
 
-//footer github
-.bi::before {
-    display: inline-block;
-    content: "";
-    vertical-align: -.125em;
-    background-image: url("data:image/svg+xml,<svg viewBox='0 0 16 16' fill='%23333' xmlns='http://www.w3.org/2000/svg'><path fill-rule='evenodd' d='M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z' clip-rule='evenodd'/></svg>");
-    background-repeat: no-repeat;
-    background-size: 1rem 1rem;
-  }
+footer #github {
+    margin-right: 1em;
+}
+
+footer #linkedin {
+    margin-right: 4em;
+}
 
 
 
