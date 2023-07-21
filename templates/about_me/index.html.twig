@@ -3,50 +3,51 @@
 {% block title %}About Me{% endblock %}
 
 {% block body %}
-    <div class="ml-5 mr-5 mt-4 mb-4">
-        <h1>About Me</h1>
-    </div>
-    <div class="p-3 mb-2 bg-light text-dark">
-        <div class="text-center">
-            <img class="rounded" src="{{ asset('build/images/about/esther.jpg') }}" alt="profile"/>
-            <p>Après de 10 ans en tant qu'ingenieur audiovisuel, et conscient de l'importance de continuer à apprendre et à évoluer, j’ai suivi des formations autodidactiques jusqu’au présent où j’ai décidé de consolider mes connaissances dans l'un des secteurs qui me passionne le plus, la programmation.</p>
-        </div>
-        <div class="text-center">
-            {{ include('about_me/_modal_resume.html.twig') }}
-        </div>
-    </div>
-    <div class="text-center mt-5 mb-4">
-        <h1>Experience</h1>
-    </div>
-    {% include 'about_me/_timeline.html.twig' %}
-
-
-    <div class="skills-competences">
+    <div class="margin">
         <div class="ml-5 mr-5 mt-4 mb-4">
-            <h1>Competences</h1>
-            <div class="competences">
-                <div class="left">
-                    <p>HTML/CSS/JS</p>
-                    <p>PHP</p>
-                    <p>MySQL</p>
-                    <p>Symfony</p>
-                </div>
-                <div class="right">
-                    <p>GitHub</p>
-                    <p>Figma</p>
-                    <p>MVC</p>
-                    <p>Méthodes Agile</p>
-                </div>
+            <h1>About Me</h1>
+        </div>
+        <div class="p-3 mb-2 shadow bg-light text-dark">
+            <div class="text-center">
+                <img class="rounded" src="{{ asset('build/images/about/esther.jpg') }}" alt="profile"/>
+                <p>Après de 10 ans en tant qu'ingenieur audiovisuel, et conscient de l'importance de continuer à apprendre et à évoluer, j’ai suivi des formations autodidactiques jusqu’au présent où j’ai décidé de consolider mes connaissances dans l'un des secteurs qui me passionne le plus, la programmation.</p>
+            </div>
+            <div class="text-center">
+                {{ include('about_me/_modal_resume.html.twig') }}
             </div>
         </div>
+        <div class="text-center mt-5 mb-4">
+            <h1>Experience</h1>
+        </div>
+        {% include 'about_me/_timeline.html.twig' %}
 
-        <div class="ml-5 mr-5 mt-4 mb-4">
-            <h1>Skills</h1>
-            <div class="skills">
-                <p>Capacité d'apprentissage rapide</p>
-                <p>Adaptation aux changements</p>
-                <p>Organisée</p>
-                <p>Méthodique</p>
+        <div class="skills-competences">
+            <div class="ml-5 mr-5 mt-4 mb-4">
+                <h1>Competences</h1>
+                <div class="competences">
+                    <div class="left">
+                        <p>HTML/CSS/JS</p>
+                        <p>PHP</p>
+                        <p>MySQL</p>
+                        <p>Symfony</p>
+                    </div>
+                    <div class="right">
+                        <p>GitHub</p>
+                        <p>Figma</p>
+                        <p>MVC</p>
+                        <p>Méthodes Agile</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ml-5 mr-5 mt-4 mb-4">
+                <h1>Skills</h1>
+                <div class="skills">
+                    <p>Capacité d'apprentissage rapide</p>
+                    <p>Adaptation aux changements</p>
+                    <p>Organisée</p>
+                    <p>Méthodique</p>
+                </div>
             </div>
         </div>
     </div>

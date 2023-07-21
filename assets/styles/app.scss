@@ -1,10 +1,18 @@
+// @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap');
 
 $font-family-base: 'Quicksand', sans-serif;
-$secondary: #e6ac2f;
-$botton: #ffe5ac;
+// $secondary: #e6ac2f;
+$secondary: #000f3f;
+$tertiary: black;
+$botton: #cfdaff;
 
-//Navbar
+
+div.margin {
+  margin: 0 2em;
+}
+//*********** NAVBAR *******************************
 .navbar.navbar-expand-lg.bg-light {
     font-size: 1.1em;
     font-weight: 600;
@@ -15,46 +23,55 @@ $botton: #ffe5ac;
     font-weight: 500;
 }
 
-//Navbar bottons
+//Navbar bottons underline
+.navbar-nav.me-auto a {
+  position: relative;
+}
 
-a.nav-link:hover { 
-    background-color: $secondary;
-    color: white;
-    border-radius: 3px 12px;
+.navbar-nav.me-auto a::after {
+  content: "";
+  background-color: $secondary;
+  position: absolute;
+  left: 0;
+  top: 80%;
+  width: 100%;
+  height: 2px;
+
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+// .navbar-nav.me-auto a.selected::after,
+.navbar-nav.me-auto a:hover::after {
+  opacity: .8;
 }
 
 
-
-
-
-
-
-
-
-
-
-//Home, split screen
-.leftside, .rightside {
-    height: 50vh;
-    width: 100%;
+//************* HOME ********************
+.home {
+  position: relative;
+  display: inline-block;
+  text-align: center;
 }
 
-.rightside {
-    background-color: rgb(21, 163, 92);
+.home img {
+  width: 100%;
+  filter: brightness(0.5);
 }
 
-//Home, text left
-.row.no-gutters .col-lg-6.no-gutters .leftside.d-flex.justify-content-center.align-items-center{
-    font-size: 30px;
+.name{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 3em;
+  font-family: 'Montserrat', sans-serif;
 }
 
-//Home, image left
-.row.no-gutters .col-lg-6.no-gutters .rightside img {
-    width: 100%;
-    height: 100vh;
-}
+//********* PROJECTS *****************************
 
-//Project index, title souligné
+//Title souligné
 .ml-5.mr-5.mt-4.mb-4 h1{
     border-bottom: 1px solid black;
     padding-bottom: 0.2em;
@@ -62,10 +79,9 @@ a.nav-link:hover {
     margin-top: 2.5em;
 }
 
-//Project index, card fade
+//Card fade
 .container{
     display: flex;
-    // justify-content: space-between;
 }
 
 .content{
@@ -74,7 +90,7 @@ a.nav-link:hover {
 }
 
 .content .content-overlay{
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 15, 63,0.8);
     border-radius: 5px;
     position: absolute;
     left: 0;
@@ -131,7 +147,8 @@ a.nav-link:hover {
     top: 80%;
 }
 
-//About me bottons
+//************ ABOUT ME *********************
+//Bottons in top box and inside timeline
 button.btn.btn-light, 
 a.btn.btn-light {
     background: #ffffff;  /* fallback for old browsers */
@@ -141,7 +158,7 @@ a.btn.btn-light {
     border: 1px solid #c9c9c9;
 }
 
-//About me, pic+text top
+//Pic+text top
 .text-center {
     display: flex;
     flex-direction: row;
@@ -158,12 +175,13 @@ a.btn.btn-light {
     text-align: justify;
 }
 
-//About me, background pic+text+botton profile
+//Background pic+text+botton profile
 .p-3.mb-2.bg-light.text-dark {
     width: 50%;
     margin: auto;
     border-radius: 5px;
     border: 1px solid #d6d6d6;
+    box-shadow: 1px 1px 1px 0px black;
 }
 
 //Timeline aboutme
@@ -179,14 +197,6 @@ $text-color: #3c3f64;
   box-sizing: border-box;
 }
 
-body {
-  font: normal 16px/1.5 'Quicksand', sans-serif;
-  background: $background-color;
-  color: $text-color;
-  overflow-x: hidden;
-  padding-bottom: 50px;
-}
-
 // Timeline Styling
 .timeline {
   ul {
@@ -197,6 +207,7 @@ body {
       margin: 0 auto;
       padding-top: 50px;
       background: #fff;
+      background-color: #cacaca;
       &::after {
         content: '';
         position: absolute;
@@ -207,7 +218,7 @@ body {
         width: 18px;
         height: 18px;
         z-index: 0;
-        background: #e6ac2f;
+        background: $secondary;
       }
       div {
         position: relative;
@@ -221,7 +232,7 @@ body {
         align-items: center;
         time {
           position: absolute;
-          background: #e6ac2f;
+          background: $secondary;
           color: white;
           padding: 0 1em;
           height: 30px;
@@ -282,12 +293,12 @@ body {
       }
       &:nth-of-type(odd) {
         div {
-          transform: translate3d(100px, -10px, 0) rotate(10deg);
+          transform: translate3d(100px, -10px, 0) rotate(0deg);
         }
       }
       &:nth-of-type(even) {
         div {
-          transform: translate3d(-100px, -10px, 0) rotate(10deg);
+          transform: translate3d(-100px, -10px, 0) rotate(0deg);
         }
       }
       &.in-view {
@@ -364,7 +375,7 @@ body {
     text-align: end;
 }
 
-//Footer
+//**************  FOOTER **************************
 footer.bg-dark.text-center.text-white {
     position: fixed;
     height: 55px;
@@ -375,6 +386,7 @@ footer.bg-dark.text-center.text-white {
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
+
 }
 
 footer span {
@@ -400,10 +412,7 @@ i.bi {
     color: white;
 }
 
-
-
-
-
+//**************  MEDIA QUERIES ******************************
 @media screen and (min-width:401px) {
     .leftside, .rightside{
         height: 100vh;
@@ -412,7 +421,7 @@ i.bi {
     .container {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-around;
+        justify-content: space-between;
     }
 
     //zoom card
@@ -424,15 +433,12 @@ i.bi {
     .container .row .col-md-4 .content .card.text-center.mt-4.shadow.p-3.mb-5.bg-white.rounded {
         width: 25rem;
     }
-
 }
 
 @media screen and (max-width:400px) {
-    
     .container .row .col-md-4 .content .card.text-center.mt-4.shadow.p-3.mb-5.bg-white.rounded {
         width: 40rem;
     }
-
 }
 
 @import "~bootswatch/dist/simplex/variables";
